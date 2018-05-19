@@ -13,4 +13,7 @@ $(document).ready(function(){
   $('ul#list4').addClass('textoAzul');
   $('ul#list4').css('font-size','50px');
   $('ul').css('font-weight','bold');
+
+  $('ul.list1').removeClass('textoVerde');
+  $('ul.list1').addClass('alert alert-primary');
 });
