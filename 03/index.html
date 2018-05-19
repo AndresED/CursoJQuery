@@ -36,10 +36,9 @@
 
 	<div class="row">
 
-		<div class="col-sm-4 text-center">
+		<div class="col-sm-4">
 			<img src="img/nophoto.jpg" class="img-circle foto_1">
-			<h4>Andrés Esquivel</h4>
-			<!--<img src="img/nophoto.jpg" class="foto_2">-->
+			<img src="img/nophoto.jpg" class="foto_2">
 		</div>
 
 		<div class="col-sm-5">
@@ -66,10 +65,7 @@
 
 <script>
 	$("img.foto_1").attr("src","./img/profesor.jpg").removeClass("img-circle").addClass("img-thumbnail");
-	//$("img.foto_2").attr("src","./img/friend.jpg").addClass("img-circle").addClass("img-thumbnail");
-	$(".col-sm-5").find("p")
-		//.text("Saludos, soy un <u>catedratico de Udemy</u>")
-		.html("Saludos, soy un <u>catedratico de Udemy</u>")
+	$("img.foto_2").attr("src","./img/friend.jpg").addClass("img-circle").addClass("img-thumbnail");
 </script>
 
 
