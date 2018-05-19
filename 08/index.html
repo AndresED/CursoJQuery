@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>Objetos 101</title>
+
+	<!-- Importacion del jQuery -->
+	<script src="js/lib/jquery-2.1.4.min.js"></script>
+
+	<!-- Importacion del Bootstrap -->
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+
+	<link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+
+
+<div class="container text-center">
+
+	<h1>Objetos 101: <small>Comprendiendo lo básico</small></h1>
+	<hr>
+
+	<button type="button" name="button" class="btn btn-primary" id="btn_encender">Encender carro</button>
+	<button type="button" name="button" class="btn btn-danger" id="btn_apagar">Apagar carro</button>
+
+
+</div>
+<script>
+	var carro={
+		encendido:false,
+		llantas:4,
+		puertas:5,
+		marca:"Toyota",
+		colores:["azul","blanco","rojo","negro"],
+		fabricate:{
+			creador:"Toyota",
+			telefono:"5555-555",
+			direccion:"XYZ Avenida 123"
+		},
+		propietario:{
+			nombre:"Andres Esquivel",
+			anio_compra:2018
+		},
+		arrancar: function(){
+				console.log("El vehículo arranco");
+				carro.encendido=true;
+		},
+		apagar: function(){
+				if (carro.encendido===true) {
+						console.log("El vehículo se esta apagando");
+						setTimeout(function () {
+							console.log("El vehículo esta apagando");
+							carro.encendido=false;
+						}, 1000);
+				}else{
+						console.log("El vehículo ya esta apagado");
+				}
+
+		}
+	};
+	var fab= carro.fabricate;
+	//console.log(fab);
+	fab.direccion="ABC Avenida 321"
+	//console.log(fab);
+	$("#btn_encender").on("click",function(){
+		carro.arrancar();
+	});
+	$("#btn_apagar").on("click",function(){
+		carro.apagar();
+	});
+</script>
+
+
+
+
+
+</body>
+</html>
